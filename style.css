@@ -1,0 +1,231 @@
+:root{
+    --blue-accent: #00ffff;
+    --pink-accent: #ff1c8e;
+    --yello-accent: #FFDD00;
+    --green-accent: #39FF14;
+    --red-accent: #FF3B30;
+    --darkblue-accent: #0053ab;
+    --main-text:rgb(214, 214, 214);
+    --co-main-text:rgb(195, 195, 195);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(37, 37, 39);
+    display: inline;
+}
+
+::-webkit-scrollbar{
+    width: 0.8em;
+}
+::-webkit-scrollbar-track{
+    background: rgb(37, 37, 39);
+    margin-block: 0.1em;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background:black ;
+    border-radius: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--darkblue-accent);
+    color: white;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+.navbar-links ul {
+    display: flex;
+    list-style: none;
+}
+.navbar-links li {
+    margin-left: 1rem;
+}
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-right: 20px;
+}
+/* Hamburger menu styles */
+.toggle-button {
+    display: none;
+    cursor: pointer;
+}
+.toggle-button img {
+    width: 25px;
+    height: 25px;
+    display: none; /* Initially hide both icons */
+}
+/* Display the hamburger icon by default */
+.toggle-button .hamburger-icon {
+    display: block;
+}
+h1{
+    color: var(--main-text);
+    font-family: "Oswald", sans-serif;
+    font-size: 5em;
+line-height: 90px;
+}
+h2{
+    color: var(--pink-accent);
+    font-family: "Afacad Flux", sans-serif;
+    font-size:40px ;
+    font-weight: normal;
+    line-height: 100px;
+    transition: 1s;
+}
+h2:hover{
+    color: var(--red-accent);
+}
+h3{
+    color: var(--co-main-text);
+    margin: 150px;
+    text-align: center;
+    font-size: 100px;
+    transition: color 2s  ;
+    padding-top:  300px; ;
+    font-family: "Oswald", sans-serif;
+}
+.headcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+section{
+    justify-content: center;
+    align-items: center;      
+    margin-left: 20px;
+}
+#logo{
+width: 500px;
+margin-top: 50px;
+margin-left: 150px;
+margin-right: 50px;
+margin-bottom: 50px;
+}
+#container{
+margin-top: 50px;
+
+}
+
+.autotype{
+    color: var(--yello-accent);
+}
+.flextut {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    text-align: center;
+    margin-top: 90px;
+}
+.biger{
+    font-size: x-large;
+}
+.flextut img{
+    border-radius: 100%;
+    margin-bottom: 30px;
+    width: 50%;
+}
+.center{
+    display: block; /* Makes the image a block element */
+    border-radius: 1000%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    width: 40%
+    
+}
+.centerText{
+    text-align: center;
+    margin-bottom: 100px;
+    color: var(--co-main-text);
+}
+h3:hover{
+    color: var(--yello-accent);
+}
+.flex-item {
+    padding: 30px; /* Adds some padding to items */
+    margin-top: 10px; 
+    margin-bottom: 100px;
+    color: var(--co-main-text);
+    font-size: 80%;
+}
+
+
+@media (max-width:600px){
+  #slogan{
+    margin-top:50px;
+  }
+  #logo{
+    display: none;
+  }
+  .autotype{
+    color: var(--yello-accent);
+    font-size: 65px;
+}
+.centerText{
+    margin-bottom: 30px;
+
+}
+.center{
+    display: block; /* Makes the image a block element */
+    border-radius: 1000%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    width: 50%
+}
+h3{
+    font-size: 30px;
+    margin: 20px;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    color: var(--yello-accent);}
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    /* Show the close icon when the navbar has the 'active' class */
+    .navbar.active .toggle-button .hamburger-icon {
+        display: none;
+    }
+
+    .navbar.active .toggle-button .close-icon {
+        display: block;
+    }
+
+    .navbar.active .navbar-links {
+        display: flex;
+    }
+}

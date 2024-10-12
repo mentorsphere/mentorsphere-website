@@ -1,0 +1,215 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue-accent: #00ffff;
+    --pink-accent: #ff1c8e;
+    --yello-accent: #FFDD00;
+    --green-accent: #39FF14;
+    --red-accent: #FF3B30;
+    --darkblue-accent: #0053ab;
+    --main-text:rgb(214, 214, 214);
+    --co-main-text:rgb(195, 195, 195);
+
+}
+
+body{
+    background-color: rgb(37, 37, 39);
+}
+
+
+::-webkit-scrollbar{
+    width: 0.8em;
+}
+::-webkit-scrollbar-track{
+    background: rgb(37, 37, 39);
+    margin-block: 0.1em;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background:black ;
+    border-radius: 100px;
+}
+
+/* Basic styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0053ab;
+    color: white;
+}
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 1rem;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-right: 20px;
+
+}
+
+/* Hamburger menu styles */
+.toggle-button {
+    display: none;
+    cursor: pointer;
+}
+img{
+    width: 100%;
+}
+
+.toggle-button img {
+    width: 25px;
+    height: 25px;
+    display: none; /* Initially hide both icons */
+}
+
+/* Display the hamburger icon by default */
+.toggle-button .hamburger-icon {
+    display: block;
+}
+
+.allcards{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-card {
+    background-color: rgb(44, 44, 59);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 90vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin: 30px;
+    
+    
+}
+
+.course-card:hover {
+    transform: scale(1.02);
+    border: 1px solid var(--yello-accent);
+}
+
+/* Course Image */
+.course-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Course Details */
+.course-details {
+    padding: 16px;
+}
+
+.course-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--main-text);
+}
+
+.instructor-name {
+    font-size: 14px;
+    color: var(--co-main-text);
+    margin: 8px 0;
+}
+
+/* Course Rating */
+.course-rating {
+    font-size: 14px;
+    color: #f39c12;
+    margin-bottom: 8px;
+}
+
+/* Course Price */
+.course-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+button{
+    margin-top: 10px;
+    background-color: var(--darkblue-accent); /* Flat color */
+    border: none; /* No border */
+    color: white; /* White text for contrast */
+    padding: 12px 24px; /* Add some padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Make it inline */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+button>a{
+    color: whitesmoke;
+}
+
+button:hover {
+    background-color: var(--darkblue-accent); /* Darker shade on hover */
+    box-shadow: 0 0 10px #007BFF, 0 0 20px var(--blue-accent), 0 0 30px var(--blue-accent); /* Glowing effect */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    /* Show the close icon when the navbar has the 'active' class */
+    .navbar.active .toggle-button .hamburger-icon {
+        display: none;
+    }
+
+    .navbar.active .toggle-button .close-icon {
+        display: block;
+    }
+
+    .navbar.active .navbar-links {
+        display: flex;
+    }
+
+    .course-card {
+        width: 90%;
+    }
+}

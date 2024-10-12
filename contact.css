@@ -1,0 +1,157 @@
+:root{
+    --blue-accent: #00ffff;
+    --pink-accent: #ff1c8e;
+    --yello-accent: #FFDD00;
+    --green-accent: #39FF14;
+    --red-accent: #FF3B30;
+    --darkblue-accent: #0053ab;
+    --main-text:rgb(214, 214, 214);
+    --co-main-text:rgb(195, 195, 195);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(37, 37, 39);
+}
+
+
+::-webkit-scrollbar{
+    width: 0.8em;
+}
+::-webkit-scrollbar-track{
+    background: rgb(37, 37, 39);
+    margin-block: 0.1em;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background:black ;
+    border-radius: 100px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--darkblue-accent);
+    color: white;
+}
+
+h1{
+    margin: 20px;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    
+}
+
+.navbar-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 1rem;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-right: 20px;
+
+}
+
+/* Hamburger menu styles */
+.toggle-button {
+    display: none;
+    cursor: pointer;
+}
+
+.toggle-button img {
+    width: 25px;
+    height: 25px;
+    display: none; /* Initially hide both icons */
+}
+
+/* Display the hamburger icon by default */
+.toggle-button .hamburger-icon {
+    display: block;
+}
+.image-container{
+    z-index: -1;
+    height: 100vh;
+}
+
+
+
+#typeform {
+    width: 80vw; /* Set a fixed width */
+    height: 35vw; /* Set a fixed height */
+    background-color: lightblue;
+    position: absolute; /* Set absolute positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift it back by half its own width and height */
+    margin-top: 300px;
+    margin-bottom: 200px;
+
+}
+
+h1{
+color: var(--co-main-text);
+text-align: center ;
+margin: 40px;
+font-size: 50px;
+font-family: "Afacad Flux", sans-serif;
+}
+
+@media (max-width:600px){
+
+
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    /* Show the close icon when the navbar has the 'active' class */
+    .navbar.active .toggle-button .hamburger-icon {
+        display: none;
+    }
+
+    .navbar.active .toggle-button .close-icon {
+        display: block;
+    }
+
+    .navbar.active .navbar-links {
+        display: flex;
+    }
+
+}
