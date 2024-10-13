@@ -111,7 +111,7 @@ h1{
 color: var(--co-main-text);
 text-align: center ;
 margin: 40px;
-font-size: 50px;
+font-size: clamp(1.5rem, 50px, 4rem);
 font-family: "Afacad Flux", sans-serif;
 }
 
@@ -155,7 +155,6 @@ font-family: "Afacad Flux", sans-serif;
     }
 
     h1{
-        font-size: clamp(1.5rem, 50px, 4rem);
         margin-top: 40px;
     }
 
