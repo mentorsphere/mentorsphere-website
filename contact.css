@@ -154,4 +154,15 @@ font-family: "Afacad Flux", sans-serif;
         display: flex;
     }
 
+    .textforform{
+        font-size: 1rem;
+        margin-top: 40px;
+    }
+
+    #typeform{
+        width: 80vw;
+    }
+
 }
+
+
