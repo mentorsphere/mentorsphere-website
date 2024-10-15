@@ -149,7 +149,7 @@ margin-top: 50px;
 
 /* Course Image */
 .course-image {
-    width: 100%;
+    width: 80vw;
     height: 350px;
     object-fit: cover;
 }
