@@ -38,6 +38,8 @@ body{
     align-items: center;
     background-color: var(--darkblue-accent);
     color: white;
+    position: fixed;
+    width: 100vw
 }
 
 h1{

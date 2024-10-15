@@ -37,6 +37,8 @@ body{
     align-items: center;
     background-color: var(--darkblue-accent);
     color: white;
+    position: fixed;
+    width: 100vw;
 }
 
 .navbar-links {
@@ -87,7 +89,7 @@ h2{
 h2:hover{
     color: var(--red-accent);
 }
-h3{
+span>h3{
     color: var(--co-main-text);
     margin: 150px;
     text-align: center;
@@ -119,10 +121,99 @@ margin-top: 50px;
 
 }
 
+
+#allcards{
+    margin-top: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-card {
+    background-color: rgb(44, 44, 59);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 90vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin: 30px;
+    
+    
+}
+
+.course-card:hover {
+    transform: scale(1.02);
+    border: 1px solid var(--yello-accent);
+}
+
+/* Course Image */
+.course-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Course Details */
+.course-details {
+    padding: 16px;
+}
+
+.course-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--main-text);
+}
+
+.instructor-name {
+    font-size: 14px;
+    color: var(--co-main-text);
+    margin: 8px 0;
+}
+
+/* Course Rating */
+.course-rating {
+    font-size: 14px;
+    color: #f39c12;
+    margin-bottom: 8px;
+}
+
+/* Course Price */
+.course-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+button{
+    margin-top: 10px;
+    background-color: var(--darkblue-accent); /* Flat color */
+    border: none; /* No border */
+    color: white; /* White text for contrast */
+    padding: 12px 24px; /* Add some padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Make it inline */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+button>a{
+    color: whitesmoke;
+}
+
+button:hover {
+    background-color: var(--darkblue-accent); /* Darker shade on hover */
+    box-shadow: 0 0 10px #007BFF, 0 0 20px var(--blue-accent), 0 0 30px var(--blue-accent); /* Glowing effect */
+}
+
+
 .autotype{
     color: var(--yello-accent);
 }
-.flextut {
+#flextut {
     display: flex; /* Enables Flexbox */
     flex-direction: column;
     justify-content: center; /* Centers items horizontally */
@@ -133,10 +224,18 @@ margin-top: 50px;
 .biger{
     font-size: x-large;
 }
-.flextut img{
+#flextut img{
     border-radius: 100%;
     margin-bottom: 30px;
     width: 50%;
+}
+
+#Meet{
+    margin-top: 400px;
+    margin-bottom: 200px;
+    text-align: center;
+    font-size: 10vw;
+    font-family: 'Oswald', sans-serif;
 }
 .center{
     display: block; /* Makes the image a block element */
@@ -187,7 +286,7 @@ h3:hover{
     padding-bottom: 30px;
     width: 50%
 }
-h3{
+span>h3{
     font-size: 30px;
     margin: 20px;
     padding-top: 200px;
@@ -228,4 +327,8 @@ h3{
     .navbar.active .navbar-links {
         display: flex;
     }
+    .course-card {
+        width: 90%;
+    }
+    
 }
