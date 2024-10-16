@@ -128,6 +128,7 @@ margin-top: 50px;
     justify-content: center; /* Optional: center vertically if needed */
     width: 100%; /* Full width of the container */
     padding: 20px 0; /* Optional: Add some padding for spacing */
+    margin-top: 50vh;
 }
 
 .course-card {
